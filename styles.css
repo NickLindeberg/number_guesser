@@ -23,6 +23,7 @@ input {
   box-sizing: border-box;
   font-size: 20px;
   text-align: center;
+  display: inline-block;
 }
 
 form {
@@ -31,8 +32,24 @@ form {
 }
 
 .btn {
+  width: 25%;
   color: #FFFFFF;
   background-color: #929497;
   border-radius: 20px;
   display: inline-block;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  text-align: center;
+}
+
+::placeholder {
+  color: #D0D2D3;
+  font-size: 1.5em;
+
+}
+
+.wholePage {
+  text-align: center;
 }
