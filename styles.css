@@ -1,0 +1,38 @@
+.header-box {
+  background-color: #404041;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+
+.pink-text {
+  color: #ED458B;
+}
+
+h1 {
+  color: #E6E7E8;
+}
+
+input {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: center;
+}
+
+form {
+  margin-top: 150px;
+  text-align: center;
+}
+
+.btn {
+  color: #FFFFFF;
+  background-color: #929497;
+  border-radius: 20px;
+  display: inline-block;
+}
