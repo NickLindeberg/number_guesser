@@ -53,3 +53,7 @@ form {
 .wholePage {
   text-align: center;
 }
+
+#results, #highLow {
+  display: none;
+}
