@@ -12,11 +12,19 @@
         <h1><span class="pink-text">Number</span> Guesser</h1>
       </div>
     </header>
-    <form id="guessForm">
-      <input type="number" min="0" max="100" step="1" placeholder="Enter your guess">
-      <input class="btn" type="button" name="" onclick="clearGuess()" value="Clear">
-      <input class="btn" type="button" name="" onclick="submitGuess()" value="Guess">
-    </form>
+    <div class="wholePage">
 
+      <form id="guessForm">
+        <input type="number" min="0" max="100" step="1" placeholder="Enter your guess" id="userGuess">
+        <br>
+        <input class="btn" type="button" name="" onclick="showGuess()" value="Guess">
+        <input class="btn" type="button" name="" onclick="clearGuess()" value="Clear" id="clear">
+      </form>
+
+      Your Guess Was
+      <div id='showGuess'></div>
+
+      <button type="button" class="btn" onclick="resetPage()" name="button" id='reset'>Reset</button>
+  </div>
   </body>
 </html>
