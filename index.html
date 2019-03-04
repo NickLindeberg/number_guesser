@@ -13,17 +13,18 @@
       </div>
     </header>
     <div class="wholePage">
-
       <form id="min-max">
-        <input class='input' type="number" id="min-num" step="1" placeholder="Choose Min Number" >
-        <input class='input' type="number" id="max-num" step="1" placeholder="Choose Max Number" >
-        <button type="button" class="reset-btn" onclick="resetPage()" name="button" id='reset-button' disabled>Reset</button>
+        <label for="Min"></label>
+        <label for="Max"></label>
+        <input class='mm' type="number" id="min-num" step="1" placeholder="Min" required>
+        <input class='mm' type="number" id="max-num" step="1" placeholder="Max" required>
+        <br>
+        <button type="submit" class="mm-btn" onclick="setMinMax()" name="button" id='min-max-button'>Set Min/Max</button>
 
       </form>
 
       <form id="guessForm">
-        <h2>Guess A Number Between 1-100</h2>
-        <input class='input' type="number" id="userGuess" onkeyup="guessInput();clearInput()" pattern='[1-100]' step="1" placeholder="Enter your guess" >
+        <input class='input' type="number" id="userGuess" onkeyup="guessInput();clearInput()" pattern='[1-100]' step="1" placeholder="Enter your guess" disabled>
         <br>
         <input class="btn" type="button" onclick="goodNumber()" value="Guess" id='guess-button' disabled>
         <input class="btn" type="button" onclick="clearGuess()" value="Clear" id='clear-button' disabled>

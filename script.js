@@ -1,6 +1,22 @@
-const nmbr = Math.ceil(Math.random() * 100);
-const max = document.getElementById("max-num").value;
-const min = document.getElementById("min-num").value;
+function setMinMax() {
+  max = Math.ceil(document.getElementById("max-num").value);
+  min = Math.floor(document.getElementById("min-num").value);
+  if (min > max) {
+    alert("The Maximum HAS to be greater than the minimum")
+  } else {
+    nmbr =  Math.ceil(Math.random() * (max - min)) + min;
+    document.getElementById('min-max-button').disabled = true;
+    document.getElementById('min-num').disabled = true;
+    document.getElementById('max-num').disabled = true;
+    document.getElementById('userGuess').disabled = false;
+  }
+} 
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+}
 
 function clearGuess() {
   // sets a function to clear the guess to use for the clear button
@@ -37,13 +53,11 @@ function goodNumber() {
   var guess = document.getElementById("userGuess").value;
   if (guess > max) {
     clearGuess();
-    alert(mess = "Error, WAY TOO HIGH, choose a number between 1-100")
+    alert(mess = "Error, WAY TOO HIGH, choose a lower number")
   } else if (guess < min) {
     clearGuess();
-    alert(mess = "Error, WAY TOO LOW, choose a number between 1-100")
+    alert(mess = "Error, WAY TOO LOW, choose a higher number")
   } else {
-    mess = ""
-    document.getElementById("error").innerHTML = mess;
     userResult();
   }
 }
