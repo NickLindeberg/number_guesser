@@ -50,6 +50,7 @@ function validate() {
     message = "Too Low, guess again!";
   }
   document.getElementById("highLow").innerHTML = message;
+  resetButton();
 }
 
 
@@ -68,3 +69,11 @@ function clearInput() {
             document.getElementById('clear-button').disabled = false;
         }
     }
+
+function resetButton() {
+	 if(document.getElementById("userGuess").value==="") {
+            document.getElementById('reset').disabled = true;
+        } else {
+            document.getElementById('reset').disabled = false;
+        }
+      }
