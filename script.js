@@ -1,3 +1,5 @@
+const nmbr = Math.ceil(Math.random() * 100);
+
 function clearGuess() {
   // sets a function to clear the guess to use for the clear button
   document.getElementById("guessForm").reset();
@@ -18,6 +20,8 @@ function userResult() {
   // sets a variable based on id passed into function
    x.style.display = "block";
    showGuess();
+   cheat();
+   validate();
 }
 
 function resetPage() {
@@ -26,6 +30,22 @@ function resetPage() {
   // location reload refreshes the page
 }
 
-function disableButton() {
+function cheat() {
+  document.getElementById("cheat").innerHTML =
+  nmbr;
+}
 
+function validate() {
+  var message;
+  var guess = document.getElementById("userGuess").value;
+  if (guess == nmbr) {
+    message = "Boom!";
+  }
+  else if (guess > nmbr ) {
+    message = "Too High, guess again!";
+  }
+  else {
+    message = "Too Low, guess again!";
+  }
+  document.getElementById("highLow").innerHTML = message;
 }
