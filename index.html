@@ -13,26 +13,33 @@
       </div>
     </header>
     <div class="wholePage">
+      <form id="min-max">
+        <label for="Min"></label>
+        <label for="Max"></label>
+        <input class='mm' type="number" id="min-num" step="1" placeholder="Min" required>
+        <input class='mm' type="number" id="max-num" step="1" placeholder="Max" required>
+        <br>
+        <button type="submit" class="mm-btn" onclick="setMinMax()" name="button" id='min-max-button'>Set Min/Max</button>
+
+      </form>
 
       <form id="guessForm">
-        <input type="number" min="0" max="100" step="1" placeholder="Enter your guess" id="userGuess">
+        <input class='input' type="number" id="userGuess" onkeyup="guessInput();clearInput()" pattern='[1-100]' step="1" placeholder="Enter your guess" disabled>
         <br>
-        <input class="btn" type="button" name="" onclick="userResult();" value="Guess">
-        <input class="btn" type="button" name="" onclick="clearGuess()" value="Clear" id="clear">
+        <input class="btn" type="button" onclick="goodNumber()" value="Guess" id='guess-button' disabled>
+        <input class="btn" type="button" onclick="clearGuess()" value="Clear" id='clear-button' disabled>
       </form>
 
       <div id="information">
 
-        <div id='results'>Your Guess Was</div>
-        <div id='guess' class="pink-text"></div>
+        <h3><div id='results'>Your Last Guess Was</div></h3>
+        <div id='guess' class="pink-text big-text"></div>
+        <h3><div id="highLow"></div></h3>
       </div>
-      <div id="highLow"></div>
       <div id="cheat"></div>
+      <div id="error"></div>
 
-      <button type="button" class="btn" onclick="resetPage()" name="button" id='reset'>Reset</button>
-
-
-      <p id="demo"></p>
+      <button type="button" class="reset-btn" onclick="resetPage()" name="button" id='reset-button' disabled>Reset</button>
 
   </div>
   </body>

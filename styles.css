@@ -7,12 +7,28 @@
   left: 0;
 }
 
+header {
+  margin-bottom: 100px;
+}
+
 .pink-text {
   color: #ED458B;
 }
 
 h1 {
   color: #E6E7E8;
+}
+
+.title {
+  background-color:
+}
+
+h2 {
+  color: #FFFFFF;
+  background-color: #EB008B;
+  width: 50%;
+  display: inline-block;
+  border-radius: 20px;
 }
 
 input {
@@ -26,8 +42,24 @@ input {
   display: inline-block;
 }
 
+.mm {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+.mm:disabled {
+  background-color: green;
+  color: white;
+}
+
+
 form {
-  margin-top: 150px;
   text-align: center;
 }
 
@@ -44,6 +76,41 @@ form {
   text-align: center;
 }
 
+.reset-btn {
+  width: 50%;
+  color: #FFFFFF;
+  background-color: #929497;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  text-align: center;
+}
+
+.mm-btn {
+  width: 50%;
+  color: #FFFFFF;
+  background-color: #929497;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  text-align: center;
+}
+
+.btn:hover, .reset-btn:hover, .mm-btn:hover {
+  color: #FFFFFF;
+  background-color: #EB008B;
+}
+
+.btn:disabled, .reset-btn:disabled, .mm-btn:disabled {
+  background-color: #D0D2D3;
+}
+
 ::placeholder {
   color: #D0D2D3;
   font-size: 1.5em;
@@ -56,4 +123,8 @@ form {
 
 #information {
   display: none;
+}
+
+.big-text {
+  font-size: 75px;
 }
