@@ -17,16 +17,17 @@
       <form id="guessForm">
         <input type="number" min="0" max="100" step="1" placeholder="Enter your guess" id="userGuess">
         <br>
-        <input class="btn" type="button" name="" onclick="showGuess();userResult('results');userResult('highLow')" value="Guess">
+        <input class="btn" type="button" name="" onclick="userResult('information');" value="Guess">
         <input class="btn" type="button" name="" onclick="clearGuess()" value="Clear" id="clear">
       </form>
 
-      <div id='results'>Your Guess Was</div>
+      <div id="information">
 
-      <div id='showGuess'></div>
-
-      <div id="highLow">
-        Your Guess Was too high or low not sure right now
+        <div id='results'>Your Guess Was</div>
+        <div id='guess' class="pink-text"></div>
+        <div id="highLow">
+          Your Guess Was too high or low not sure right now
+        </div>
       </div>
 
       <button type="button" class="btn" onclick="resetPage()" name="button" id='reset'>Reset</button>
