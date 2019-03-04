@@ -14,23 +14,31 @@
     </header>
     <div class="wholePage">
 
+      <form id="min-max">
+        <input class='input' type="number" id="min-num" step="1" placeholder="Choose Min Number" >
+        <input class='input' type="number" id="max-num" step="1" placeholder="Choose Max Number" >
+        <button type="button" class="reset-btn" onclick="resetPage()" name="button" id='reset-button' disabled>Reset</button>
+
+      </form>
+
       <form id="guessForm">
         <h2>Guess A Number Between 1-100</h2>
         <input class='input' type="number" id="userGuess" onkeyup="guessInput();clearInput()" pattern='[1-100]' step="1" placeholder="Enter your guess" >
         <br>
-        <input class="btn" type="button" onclick="userResult()" value="Guess" id='guess-button' disabled>
+        <input class="btn" type="button" onclick="goodNumber()" value="Guess" id='guess-button' disabled>
         <input class="btn" type="button" onclick="clearGuess()" value="Clear" id='clear-button' disabled>
       </form>
 
       <div id="information">
 
-        <div id='results'>Your Guess Was</div>
-        <div id='guess' class="pink-text"></div>
+        <h3><div id='results'>Your Last Guess Was</div></h3>
+        <div id='guess' class="pink-text big-text"></div>
+        <h3><div id="highLow"></div></h3>
       </div>
-      <div id="highLow"></div>
       <div id="cheat"></div>
+      <div id="error"></div>
 
-      <button type="button" class="btn" onclick="resetPage()" name="button" id='reset' disabled>Reset</button>
+      <button type="button" class="reset-btn" onclick="resetPage()" name="button" id='reset-button' disabled>Reset</button>
 
   </div>
   </body>

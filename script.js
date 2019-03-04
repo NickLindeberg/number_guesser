@@ -1,4 +1,6 @@
 const nmbr = Math.ceil(Math.random() * 100);
+const max = document.getElementById("max-num").value;
+const min = document.getElementById("min-num").value;
 
 function clearGuess() {
   // sets a function to clear the guess to use for the clear button
@@ -21,8 +23,6 @@ function userResult() {
   var x = document.getElementById('information');
   // sets a variable based on id passed into function
    x.style.display = "block";
-   showGuess();
-   cheat();
    validate();
 }
 
@@ -32,22 +32,39 @@ function resetPage() {
   // location reload refreshes the page
 }
 
-function cheat() {
-  document.getElementById("cheat").innerHTML =
-  nmbr;
+function goodNumber() {
+  var mess;
+  var guess = document.getElementById("userGuess").value;
+  if (guess > max) {
+    clearGuess();
+    alert(mess = "Error, WAY TOO HIGH, choose a number between 1-100")
+  } else if (guess < min) {
+    clearGuess();
+    alert(mess = "Error, WAY TOO LOW, choose a number between 1-100")
+  } else {
+    mess = ""
+    document.getElementById("error").innerHTML = mess;
+    userResult();
+  }
 }
 
 function validate() {
   var message;
   var guess = document.getElementById("userGuess").value;
   if (guess == nmbr) {
-    message = "BOOM!";
-  }
-  else if (guess > nmbr ) {
+    message = "BOOM! You Win!";
+    showGuess();
+    clearGuess();
+    document.getElementById('reset-button').disabled = false;
+  }  else if (guess > nmbr ) {
     message = "Too High, guess again!";
+    showGuess();
+    document.getElementById('reset-button').disabled = false;
   }
   else {
     message = "Too Low, guess again!";
+    showGuess();
+    document.getElementById('reset-button').disabled = false;
   }
   document.getElementById("highLow").innerHTML = message;
   resetButton();
