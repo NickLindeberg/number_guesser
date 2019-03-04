@@ -15,6 +15,13 @@ h1 {
   color: #E6E7E8;
 }
 
+h2 {
+  color: #FFFFFF;
+  background-color: #EB008B;
+  width: 50%;
+  display: inline-block;
+}
+
 input {
   width: 50%;
   padding: 12px 20px;
@@ -42,6 +49,15 @@ form {
   border: 1px solid #ccc;
   font-size: 20px;
   text-align: center;
+}
+
+.btn:hover {
+  color: #FFFFFF;
+  background-color: #EB008B;
+}
+
+.btn:disabled {
+  background-color: #D0D2D3;
 }
 
 ::placeholder {

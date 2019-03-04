@@ -15,10 +15,11 @@
     <div class="wholePage">
 
       <form id="guessForm">
-        <input type="number" min="0" max="100" step="1" placeholder="Enter your guess" id="userGuess">
+        <h2>Guess A Number Between 1-100</h2>
+        <input class='input' type="number" id="userGuess" onkeyup="guessInput();clearInput()" pattern='[1-100]' step="1" placeholder="Enter your guess" >
         <br>
-        <input class="btn" type="button" name="" onclick="userResult();" value="Guess">
-        <input class="btn" type="button" name="" onclick="clearGuess()" value="Clear" id="clear">
+        <input class="btn" type="button" onclick="userResult()" value="Guess" id='guess-button' disabled>
+        <input class="btn" type="button" onclick="clearGuess()" value="Clear" id='clear-button' disabled>
       </form>
 
       <div id="information">
@@ -30,9 +31,6 @@
       <div id="cheat"></div>
 
       <button type="button" class="btn" onclick="resetPage()" name="button" id='reset'>Reset</button>
-
-
-      <p id="demo"></p>
 
   </div>
   </body>

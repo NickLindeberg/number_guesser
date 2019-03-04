@@ -4,6 +4,8 @@ function clearGuess() {
   // sets a function to clear the guess to use for the clear button
   document.getElementById("guessForm").reset();
   // searches page for an id called guessForm and clears the form
+  guessInput();
+  clearInput();
 }
 
 function showGuess() {
@@ -39,7 +41,7 @@ function validate() {
   var message;
   var guess = document.getElementById("userGuess").value;
   if (guess == nmbr) {
-    message = "Boom!";
+    message = "BOOM!";
   }
   else if (guess > nmbr ) {
     message = "Too High, guess again!";
@@ -49,3 +51,20 @@ function validate() {
   }
   document.getElementById("highLow").innerHTML = message;
 }
+
+
+function guessInput() {
+	 if(document.getElementById("userGuess").value==="") {
+            document.getElementById('guess-button').disabled = true;
+        } else {
+            document.getElementById('guess-button').disabled = false;
+        }
+    }
+
+function clearInput() {
+	 if(document.getElementById("userGuess").value==="") {
+            document.getElementById('clear-button').disabled = true;
+        } else {
+            document.getElementById('clear-button').disabled = false;
+        }
+    }
