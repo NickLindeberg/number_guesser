@@ -16,6 +16,18 @@ function setMinMax() {
   }
 }
 
+function cheat() {
+  document.body.style.backgroundColor = "tomato";
+  document.getElementById("answer-is").innerHTML = "This Answer Is ";
+  document.getElementById("cheater").innerHTML = nmbr;
+}
+
+function clearCheat() {
+  document.body.style.backgroundColor = "white";
+  document.getElementById("cheater").innerHTML = "";
+  document.getElementById("answer-is").innerHTML = "";
+}
+
 
 
 function roundCounter() {
@@ -42,6 +54,7 @@ function hideShow() {
   document.getElementById('guess-button').classList.add('show');
   document.getElementById('clear-button').classList.add('show');
   document.getElementById('reset-button').classList.add('show');
+  document.getElementById('cheat-button').classList.add('show');
 
 }
 
@@ -115,6 +128,7 @@ function validate() {
     clearGuess();
     round = round += 1;
     roundCounter();
+    clearCheat();
     document.getElementById('reset-button').disabled = false;
     widenRange();
   }  else if (guess > nmbr ) {
