@@ -17,9 +17,9 @@
         <label for="Min"></label>
         <label for="Max"></label>
         <input class='mm' type="number" id="min-num" step="1" placeholder="Min" required>
-        <input class='mm' type="number" id="max-num" step="1" placeholder="Max" required>
+        <input class='mm' type="number" id="max-num" step="1" placeholder="Max" onkeyup="minMaxButton()" required>
         <br>
-        <button type="submit" class="mm-btn" onclick="setMinMax()" name="button" id='min-max-button'>Set Min/Max</button>
+        <button type="submit" class="mm-btn" onclick="setMinMax()" name="button" id='min-max-button' disabled>Set Min/Max</button>
 
       </form>
 

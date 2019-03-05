@@ -10,7 +10,7 @@ function setMinMax() {
     document.getElementById('max-num').disabled = true;
     document.getElementById('userGuess').disabled = false;
   }
-} 
+}
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -106,5 +106,13 @@ function resetButton() {
             document.getElementById('reset').disabled = true;
         } else {
             document.getElementById('reset').disabled = false;
+        }
+      }
+
+function minMaxButton() {
+	 if(document.getElementById("max-num").value==="") {
+            document.getElementById('min-max-button').disabled = true;
+        } else {
+            document.getElementById('min-max-button').disabled = false;
         }
       }
