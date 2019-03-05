@@ -14,32 +14,35 @@
     </header>
     <div class="wholePage">
       <form id="min-max">
-        <label for="Min"></label>
-        <label for="Max"></label>
+        <div id="instructions">
+          <h3>Add A Min and Max Number to set guessing range</h3>
+        </div>
         <input class='mm' type="number" id="min-num" step="1" placeholder="Min" required>
         <input class='mm' type="number" id="max-num" step="1" placeholder="Max" onkeyup="minMaxButton()" required>
-        <br>
-        <button type="submit" class="mm-btn" onclick="setMinMax()" name="button" id='min-max-button' disabled>Set Min/Max</button>
+        <button type="submit" class="mm-btn" onclick="setMinMax();showRange()" name="button" id='min-max-button' disabled>Set Min/Max</button>
+        <div id="round" class="hide round">
+          Round <span id="round-count"></span>
+        </div>
+        <div id='range'>
+          Choose a number between <span id="show-min"></span> and <span id="show-max"></span>
+        </div>
 
       </form>
 
       <form id="guessForm">
-        <input class='input' type="number" id="userGuess" onkeyup="guessInput();clearInput()" pattern='[1-100]' step="1" placeholder="Enter your guess" disabled>
+        <input class='input hide' type="number" id="userGuess" onkeyup="guessInput();clearInput()" pattern='[1-100]' step="1" placeholder="Enter your guess" disabled>
         <br>
-        <input class="btn" type="button" onclick="goodNumber()" value="Guess" id='guess-button' disabled>
-        <input class="btn" type="button" onclick="clearGuess()" value="Clear" id='clear-button' disabled>
+        <input class="btn hide" type="button" onclick="goodNumber()" value="Guess" id='guess-button' disabled>
+        <input class="btn hide" type="button" onclick="clearGuess()" value="Clear" id='clear-button' disabled>
       </form>
 
       <div id="information">
-
         <h3><div id='results'>Your Last Guess Was</div></h3>
         <div id='guess' class="pink-text big-text"></div>
         <h3><div id="highLow"></div></h3>
       </div>
-      <div id="cheat"></div>
-      <div id="error"></div>
 
-      <button type="button" class="reset-btn" onclick="resetPage()" name="button" id='reset-button' disabled>Reset</button>
+      <button type="button" class="reset-btn hide" onclick="resetPage()" name="button" id='reset-button' disabled>Reset</button>
 
   </div>
   </body>
