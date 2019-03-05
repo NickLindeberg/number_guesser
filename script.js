@@ -28,8 +28,6 @@ function clearCheat() {
   document.getElementById("answer-is").innerHTML = "";
 }
 
-
-
 function roundCounter() {
   document.getElementById("round-count").innerHTML = round;
   document.getElementById('round').classList.add('show');
@@ -47,7 +45,7 @@ function hideShow() {
   // disables max field once button has been clicked
   document.getElementById('instructions').style.display = "none";
 
-  document.getElementById('userGuess').disabled = false;
+  document.getElementById('userGuess').disabled = null;
   document.getElementById('userGuess').classList.add('show');
 
   // enables user guess field once button has been clicked
@@ -129,17 +127,17 @@ function validate() {
     round = round += 1;
     roundCounter();
     clearCheat();
-    document.getElementById('reset-button').disabled = false;
+    document.getElementById('reset-button').disabled = null;
     widenRange();
   }  else if (guess > nmbr ) {
     message = "Too High, guess again!";
     showGuess();
-    document.getElementById('reset-button').disabled = false;
+    document.getElementById('reset-button').disabled = null;
   }
   else {
     message = "Too Low, guess again!";
     showGuess();
-    document.getElementById('reset-button').disabled = false;
+    document.getElementById('reset-button').disabled = null;
   }
   document.getElementById("highLow").innerHTML = message;
   resetButton();
@@ -150,7 +148,7 @@ function guessInput() {
 	 if(document.getElementById("userGuess").value==="") {
             document.getElementById('guess-button').disabled = true;
         } else {
-            document.getElementById('guess-button').disabled = false;
+            document.getElementById('guess-button').disabled = null;
         }
     }
 
@@ -158,15 +156,15 @@ function clearInput() {
 	 if(document.getElementById("userGuess").value==="") {
             document.getElementById('clear-button').disabled = true;
         } else {
-            document.getElementById('clear-button').disabled = false;
+            document.getElementById('clear-button').disabled = null;
         }
     }
 
 function resetButton() {
 	 if(document.getElementById("userGuess").value==="") {
-            document.getElementById('reset').disabled = true;
+            document.getElementById('reset-button').disabled = true;
         } else {
-            document.getElementById('reset').disabled = false;
+            document.getElementById('reset-button').disabled = null;
         }
       }
 
@@ -175,6 +173,6 @@ function minMaxButton() {
 	 if(document.getElementsByClassName("mm").value==="") {
             document.getElementById('min-max-button').disabled = true;
         } else {
-            document.getElementById('min-max-button').disabled = false;
+            document.getElementById('min-max-button').disabled = null;
         }
       }
