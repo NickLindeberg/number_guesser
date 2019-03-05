@@ -9,3 +9,7 @@
 #### This will open the game in your browser
 
 ![Screenshot](1-welcome.png)
+![Screenshot](2-setrange.png)
+![Screenshot](3-enterguess.png)
+![Screenshot](4-correctguess.png)
+
