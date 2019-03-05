@@ -8,3 +8,4 @@
 #### Open index.html: `open index.html`
 #### This will open the game in your browser
 
+![Screenshot](1-welcome.png)
